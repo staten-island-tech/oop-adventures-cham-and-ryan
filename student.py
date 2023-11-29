@@ -3,4 +3,6 @@ class Student():
         self.name = name
         self.grades = grades
         self.hos = hos
-
+    def upgrade(self):
+        self.grades += 5
+        return self
