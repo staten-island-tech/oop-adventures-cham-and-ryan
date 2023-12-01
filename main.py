@@ -1,5 +1,4 @@
-from student import Student
+from location import Location
 
-Ryan = Student("Ryan", -89)
-Ryan.increase_grade()
-Ryan.info()
+forest = ("Forest", ["Wood", "Sapling", "Bear Head", "Jarvis' left pinky toenail"])
+forest.stuff()
