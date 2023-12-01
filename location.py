@@ -1,13 +1,6 @@
-class Student():
-    def __init__(self, name, grade):
-        self.name = name
-        self.grade = grade
+class Location():
+    def __init__(self, place, item):
+        self.name = place
+        self.item = item
+        print(self.item)
 
-    def increase_grade(self):
-        self.grade += 5
-
-    def decrease_grade(self):
-        self.grade -= 5
-    
-    def info(self):
-        print(f"{self.name}, {self.grade}")
