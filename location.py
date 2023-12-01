@@ -1,6 +1,7 @@
 class Location():
     def __init__(self, place, item):
-        self.name = place
+        self.place = place
         self.item = item
-        print(self.item)
+    def information(self):
+        print(f"{self.place}, {self.item}")
 
