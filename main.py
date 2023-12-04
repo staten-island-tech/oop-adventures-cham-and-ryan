@@ -1,7 +1,4 @@
-from teacher import Teacher
+from shop import Shop
 
-Zerega = Teacher("Lauren Zerega", "AP World History")
-Whalen = Teacher("Michael Whalen", "Computer Science")
-
-Zerega.information()
-Whalen.information()
+shopkeeper = Shop("Jarvis", ["Metal Detector", "Shovel", "Dog", "Map to find Jarvis' toenail"])
+shopkeeper.sell("Dog")
