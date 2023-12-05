@@ -4,4 +4,3 @@ class Location():
         self.item = item
     def information(self):
         print(f"{self.place}, {self.item}")
-
