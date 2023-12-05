@@ -1,11 +1,9 @@
 class Shop():
-    def __init__(self, name, item, price):
+    def __init__(self, name, item):
         self.name = name
         self.item = item
-        self.item = price
-    def sell(self, sold):
-        self.item.remove(sold)
-        print(f"You have purchased {sold}")
+    def sell(self, sold_item):
         print(self.item)
-    def information(self):
-        print(self.price)
+        print("What would you like to buy?")
+        self.item.remove(sold_item)
+        print(f"You have purchased {sold_item}")
