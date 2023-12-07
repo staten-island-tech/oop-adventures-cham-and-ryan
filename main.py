@@ -5,8 +5,9 @@ forest = Location("Forest", ["Wood, 80% Rarity, Worth 1 Gold Coin", "Pre-Histori
                              "Bear Head 5% Rarity 50 Gold Coins", "Jarvis' left pinky toenail 0.01% Rarity, 1000 Gold Coins"])
 forest.information()
 
-cave = Location("Cave", ["Dog Feces, 50% Rarity, Worth 0 Gold Coins",
-                         "Special Miner's hat, 30% Worth, 15 Coins",
+cave = Location("Cave", ["Dog Feces, 20% Rarity, Worth 0 Coins",
+                         "Vbucks, 30% Rarity, Worth 5 Coins"
+                         "Special Miner's hat, 30% Rarity, 15 Coins",
                          "Even more Special Miner's hat, 10% Rarity, 30 Coins",
                          "Iron, 6% Rarity, Worth 50 Gold","Diamonds, 4% Rarity, Worth 150 Gold", 
                          "Mr. Whalen, 0.02% Rarity, 0.01% Chance of 1000 Coin gain"])
@@ -47,13 +48,21 @@ def forest(y):
 
 def cave(z):
     i = randint(1, 10000)
-    if i <= 5000:
+    if i <= 2000:
         print("wow, you found dog feces. you gained 0 coins")
         z += 0
         print(f"You have {z} gold coins.")
         cham = input('again?')
         if cham == "yes":
-            forest(z)
+            cave(z)
+        return z
+    elif i <= 2000:
+        print("VBUCKS!!, you gained 5 Gold Coins")
+        z += 5
+        print(f"You have {z} gold coins.")
+        cham = input('again?')
+        if cham == "yes":
+            cave(z)
         return z
     elif i > 5000 and i <= 8000:
         print("Wow, you found special miner's hat, you gained 15 coins")
@@ -61,7 +70,7 @@ def cave(z):
         print(f"You have {z} gold coins.")
         cham = input('again?')
         if cham == "yes":
-            forest(z)
+            cave(z)
         return z
     elif i > 8000 and i <= 9000:
         print("Wow, you found the even more special miner's hat, you gained 30 coins")
@@ -69,7 +78,7 @@ def cave(z):
         print(f"You have {z} gold coins.")
         cham = input('again?')
         if cham == "yes":
-            forest(z)
+            cave(z)
         return z
     elif i > 9000 and i <= 9600:
         print("Iron!!, wow it's prettier than you, you gained 50 coins")
@@ -77,7 +86,7 @@ def cave(z):
         print(f"You have {z} gold coins.")
         cham = input('again?')
         if cham == "yes":
-            forest(z)
+            cave(z)
         return z
     elif i > 9600 and i <= 9998:
         print("DIAMONDS, wow ur so rich, you gained 150 coins")
@@ -85,19 +94,19 @@ def cave(z):
         print(f"You have {z} gold coins.")
         cham = input('again?')
         if cham == "yes":
-            forest(z)
+            cave(z)
         return z
     elif i == 9999:
         print("mr whalen??, you died to heart attack after he lowered your HOS")
         return 0
     else:
-        print("mr whalen??, he highers your HOS and you gain 1000 coins")
+        print("mr whalen??, he raises your HOS and you gain 1000 coins")
         z += 1000
         z += 50
         print(f"You have {z} gold coins.")
         cham = input('again?')
         if cham == "yes":
-            forest(z)
+            cave(z)
         return z
 
 if question == "forest":
