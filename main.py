@@ -1,6 +1,12 @@
 from location import Location
 from random import randint
 x = 0
+axe = False
+flashlight = False
+map = False
+metaldetector = False
+shovel = False
+pickaxe = False
 forest = Location("Forest", ["Wood, 80% Rarity, Worth 1 Gold Coin", "Pre-Historic Human 15% Chance", 
                              "Bear Head 5% Rarity 50 Gold Coins", "Jarvis' left pinky toenail 0.01% Rarity, 1000 Gold Coins"])
 forest.information()
@@ -16,7 +22,7 @@ question = input("do you want to go to a forest or cave?")
 
 def forest(y):
     i = randint(1, 10000)
-    if i <= 8000:
+    if i <= 5000:
         print("thats a lot of wood sir")
         y += 1
         print(f"You have {y} gold coins.")
@@ -24,12 +30,13 @@ def forest(y):
         if ryan == "yes":
             forest(y)
         return y
-    elif i > 8000 and i <= 9500:
+    elif i > 5000 and i <= 6000:
         print("you got brutally stabbed to death and died while looking at your heart on the ground")
+        print(f"You have 0 gold coins.")
         return 0
-    elif i > 9500 and i <= 9999:
+    elif i > 6000 and i <= 9999:
         print("is that a bear head i see so sigma")
-        y += 50
+        y += 35
         print(f"You have {y} gold coins.")
         ryan = input('again?')
         if ryan == "yes":
@@ -48,7 +55,11 @@ def forest(y):
 
 def cave(z):
     i = randint(1, 10000)
-    if i <= 2000:
+    if metaldetector:
+        i = randint (1, 15000)
+    if shovel:
+        i = randint (1, 10000)
+    if ((not shovel) and i < 2000) or (shovel and i < 1000):
         print("wow, you found dog feces. you gained 0 coins")
         z += 0
         print(f"You have {z} gold coins.")
@@ -56,7 +67,7 @@ def cave(z):
         if cham == "yes":
             cave(z)
         return z
-    elif i <= 2000:
+    elif i >= 2000 and i < 5000:
         print("VBUCKS!!, you gained 5 Gold Coins")
         z += 5
         print(f"You have {z} gold coins.")
@@ -80,7 +91,7 @@ def cave(z):
         if cham == "yes":
             cave(z)
         return z
-    elif i > 9000 and i <= 9600:
+    elif ((not metaldetector) and i > 9000 and i <= 9600) or (metaldetector and i > 10000 and i <= 13000):
         print("Iron!!, wow it's prettier than you, you gained 50 coins")
         z += 50
         print(f"You have {z} gold coins.")
@@ -88,7 +99,7 @@ def cave(z):
         if cham == "yes":
             cave(z)
         return z
-    elif i > 9600 and i <= 9998:
+    elif ((not metaldetector) and i > 9600 and i <= 9998) or (metaldetector and i > 13000):
         print("DIAMONDS, wow ur so rich, you gained 150 coins")
         z += 150
         print(f"You have {z} gold coins.")
