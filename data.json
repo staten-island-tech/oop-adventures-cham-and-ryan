@@ -1,0 +1,27 @@
+[
+    {
+        "item": "Flashlight",
+        "price": 100,
+        "type": "tool"
+    },
+    {
+        "item": "Map",
+        "price": 100,
+        "type": "tool"
+    },
+    {
+        "item": "Metal Detector",
+        "price": 1000,
+        "type": "tool"
+    },
+    {
+        "item": "Shovel",
+        "price": 250,
+        "type": "tool"
+    },
+    {
+        "item": "Pickaxe",
+        "price": 500,
+        "type": "tool"
+    }
+]
