@@ -1,12 +1,17 @@
 [
     {
-        "item": "Flashlight",
+        "item": "Axe",
         "price": 100,
         "type": "tool"
     },
     {
+        "item": "Flashlight",
+        "price": 200,
+        "type": "tool"
+    },
+    {
         "item": "Map",
-        "price": 100,
+        "price": 750,
         "type": "tool"
     },
     {
