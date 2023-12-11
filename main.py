@@ -1,5 +1,4 @@
-from npc import Shop
-from npc import Sell
+from npc import Trader
 
 player = 0
 
@@ -10,13 +9,13 @@ item_Pickaxe = 500
 item_Diamond = 150
 item_Iron = 50
 
-shopkeeper1 = Shop("Jarvis", ["Map", "Shovel", "Pickaxe"])
+shopkeeper1 = Trader("Jarvis", ["Map", "Shovel", "Pickaxe"])
 print(f"price: Map: {item_Map} Gold Coins, Shovel: {item_Shovel} Gold Coins, Pickaxe: {item_Pickaxe} Gold Coins")
-shopkeeper1.buy("Shovel")
+shopkeeper1.buy_trader("Shovel")
 
-player1 = Sell("Eyad", ["Diamond", "Iron"])
+player1 = Trader("Eyad", ["Diamond", "Iron"])
 print(f"price: Diamond: {item_Diamond} Gold Coins, Iron: {item_Iron} Gold Coins.")
-player1.sell("Diamond")
+player1.sell_trader("Diamond")
 
 player_gold_coins =- item_Shovel
 print(f"You have {player_gold_coins} gold coins.")
