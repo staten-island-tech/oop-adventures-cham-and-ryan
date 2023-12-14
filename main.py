@@ -1,6 +1,6 @@
 from location import Location
 from random import randint
-import time, os
+import time, os, json
 
 x = 0
 
@@ -11,10 +11,7 @@ metaldetector = False
 shovel = False
 pickaxe = False
 
-def typewrite(text, speedo):
-    for char in text:
-        print(char, end="")
-        time.sleep(speedo)
+
 
 forest = Location("Forest", [
     "Wood, 80% Rarity", 
@@ -33,9 +30,15 @@ cave = Location("Cave", ["Dog Feces, 20% Rarity, Worth 0 Coins",
                          "Even more Special Miner's hat, 10% Rarity, 30 Coins",
                          "Iron, 6% Rarity, Worth 50 Gold","Diamonds, 4% Rarity, Worth 150 Gold", 
                          "Mr. Whalen, 0.02% Rarity, 0.01% Chance of 1000 Coin gain"])
-# cave.information()
 
 # << Function With Butter >> #
+
+# cave.information()
+def typewrite(text, speedo):
+    for char in text:
+        print(char, end="")
+        time.sleep(speedo)
+
 def forest(y):
     i = randint(1, 10000)
 
@@ -55,8 +58,8 @@ def forest(y):
         return y
     
     elif i > 5000 and i <= 7000:
-        print("you got brutally stabbed to death and died while looking at your heart on the ground")
-        print(f"You have 0 gold coins.")
+        typewrite("you got brutally stabbed to death and died while looking at your heart on the ground")
+        typewrite(f"You have 0 gold coins.")
         return 0
     
     elif i > 7000 and i <= 9999:
