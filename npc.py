@@ -1,3 +1,9 @@
+import json
+x = open("data.json", encoding="utf8")
+data = json.load(x)
+
+print(data[3]["item"])
+
 class Trader():
     def __init__(self, name, item):
         self.name = name
