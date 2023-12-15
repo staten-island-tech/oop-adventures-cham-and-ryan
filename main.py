@@ -1,6 +1,6 @@
 from npc import Trader
 
-player = 0
+player_gold_coins = 0
 
 item_Map = 750
 item_Shovel = 250
@@ -17,8 +17,9 @@ player1 = Trader("Eyad", ["Diamond", "Iron"])
 print(f"price: Diamond: {item_Diamond} Gold Coins, Iron: {item_Iron} Gold Coins.")
 player1.sell_trader("Diamond")
 
-player_gold_coins =- item_Shovel
+player_gold_coins -= item_Shovel
 print(f"You have {player_gold_coins} gold coins.")
 
-player_gold_coins =+ item_Diamond
+player_gold_coins += item_Diamond
 print(f"You have {player_gold_coins} gold coins.")
+
