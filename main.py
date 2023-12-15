@@ -4,6 +4,11 @@ import time, os, json
 
 x = 0
 
+with open("coins.json", "r") as f:
+    # Serialize the updated Python list to a JSON string
+    x = json.load(f)[0]
+
+
 axe = False
 flashlight = False
 metaldetector = False
@@ -142,7 +147,7 @@ def cave(z):
             return cave(z)
         return z
     #Iron
-    elif ((not metaldetector) and i > 9000 and i <= 9600) or (metaldetector and i > 10000 and i <= 17000):
+    elif ((not metaldetector) and i > 9000 and i <= 9600) or (metaldetector and i > 10000 and i <= 15000):
         print("Iron!!, wow it's prettier than you, you gained 50 coins")
         z += 50
         print(f"You have {z} gold coins.")
@@ -151,7 +156,7 @@ def cave(z):
             return cave(z)
         return z
     #Diamond
-    elif ((not metaldetector) and i > 9600 and i <= 9998) or (metaldetector and i > 17000):
+    elif ((not metaldetector) and i > 9600 and i <= 9998) or (metaldetector and i > 15000):
         print("DIAMONDS, wow ur so rich, you gained 150 coins")
         z += 150
         print(f"You have {z} gold coins.")
@@ -182,3 +187,17 @@ elif question == "cave":
     x = cave(x)
 
 print(f"You have {x} gold coins.")
+
+new_file = "updated.json"
+with open(new_file, "w") as f:
+    # Serialize the updated Python list to a JSON string
+    json_string = json.dumps([x], indent=4)
+
+    # Write the JSON string to the new JSON file
+    f.write(json_string)
+
+
+
+# Overwrite the old JSON file with the new one
+os.remove("coins.json")
+os.rename(new_file, "coins.json")
