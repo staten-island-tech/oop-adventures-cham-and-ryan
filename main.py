@@ -29,6 +29,12 @@ elif Equip == "shovel":
     shovel = True
 elif Equip == "pickaxe":
     pickaxe = True
+elif Equip == "None":
+    axe = False
+    flashlight = False
+    metaldetector = False
+    shovel = False
+    pickaxe = False
 
 
 
@@ -50,6 +56,14 @@ cave = Location("Cave", ["Dog Feces, 20% Rarity, Worth 0 Coins",
                          "Even more Special Miner's hat, 20% Rarity, 30 Coins",
                          "Iron, 6% Rarity, Worth 50 Gold","Diamonds, 4% Rarity, Worth 150 Gold", 
                          "Mr. Whalen, 0.02% Rarity, 0.01% Chance of 1000 Coin gain"])
+
+dungeon = Location("Dungeon", ["Guard, 20% Rarity, You Die",
+                               "Spike, 20% Rarity, You Die.",
+                               "Fake Stash of Diamonds(It was bombs), 10% Rarity, You Die.",
+                               "Real Stash of Diamonds, 10% Rarity, Worth 1000 Gold",
+                               "Mr. Whalen's password (You can give yourself HOS Points),5% Rarity, Worth 1200 Gold",
+                               "Vault of Gold, 30% Rarity, Worth 800 Gold",
+                               "Ms. Zerega's Homework pass, 5% Rarity, Worth 2000 Gold"])
 
 # << Function With Butter >> #
 
@@ -105,6 +119,7 @@ def forest(y):
         return y
 
 def cave(z):
+
     i = randint(1, 10000)
     if metaldetector:
         i = randint (1, 20000)
@@ -176,15 +191,25 @@ def cave(z):
         if cham == "yes":
             return cave(z)
         return z
-#os.system("cls")
 
-question = input("Choose Forest Or Cave: ").lower()
 
+def dungeon():
+    randint(1, 10000)
+#"Guard, 20% Rarity, You Die",
+# "Spike, 20% arity, You Die.",
+#"Fake Stash of Diamonds(It was bombs), 10% Rarity, You Die.",
+#"Real Stash of Diamonds, 10% Rarity, Worth 1000 Gold",
+#"Mr. Whalen's password (You can give yourself HOS Points),5% Rarity, Worth 1200 Gold",
+#"Vault of Gold, 30% Rarity, Worth 800 Gold",
+#"Ms. Zerega's Homework pass, 5% Rarity, Worth 2000 Gold"
+
+question = input("Choose Forest, Cave, Or Dungeon: ").lower()
 if question == "forest":
-    x = forest(x)
-    
-elif question == "cave":
-    x = cave(x)
+        x = forest(x)
+if question == "cave":
+     x = cave(x)
+if question == "jarvisdungeon":
+    x = dungeon(x)
 
 print(f"You have {x} gold coins.")
 
