@@ -6,19 +6,21 @@ data = json.load(x)
 
 player_gold_coins = 0
 
-item_Map = 750
-item_Shovel = 250
-item_Pickaxe = 500
+def display():
+    for i in range(6):
+        print(f"{i + 1}. {data[i]['item']}")
+        i += 1
 
-item_Diamond = 150
-item_Iron = 50
+question_display_Jarvis = input("Do you want to see Jarvis the merchant's items?").lower()
+if question_display_Jarvis == "yes":
+    display()
 
-shopkeeper1 = Trader("Jarvis", ["Map", "Shovel", "Pickaxe"])
-print(data[1]["item"])
-shopkeeper1.buy_trader("Shovel")
+question_buy_Jarvis = input("What item number would you like to buy from Jarvis the merchant?").lower()
+merchant_Jarvis = Trader("Jarvis", ["Axe", "Flashlight", "Map", "Metal Detector", "Shovel", "Pickaxe"])
+merchant_Jarvis.buy_trader("Shovel")
 
-player_gold_coins -= item_Shovel
-print(f"You have {player_gold_coins} gold coins.")
+#player_gold_coins -= item_Shovel
+#print(f"You have {player_gold_coins} gold coins.")
 
 
 
@@ -27,4 +29,3 @@ print(f"You have {player_gold_coins} gold coins.")
 #player1.sell_trader("Diamond")
 #player_gold_coins += item_Diamond
 #print(f"You have {player_gold_coins} gold coins.")
-
