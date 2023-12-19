@@ -193,8 +193,43 @@ def cave(z):
         return z
 
 
-def dungeon():
-    randint(1, 10000)
+def dungeon(a):
+    i = randint(1, 10000)
+    if i <= 2000:
+        print("You got caught by a guard and got shot, You Die.")
+        return 0
+    elif i > 2000 and i <= 4000:
+        print("You stepped on a spike trap, You Die.") 
+        return 0
+    elif i > 4000 and i <= 5000:
+        print("Woah!! Diamonds, just kidding it was a fake stash, it was bombs. You Die.")
+        return 0
+    elif i > 5000 and i <= 6000:
+        print("Woah!!, Stash of Diamonds, you gain 1000 coins.")
+        a += 1000
+        print(f"You have {a} gold coins.")
+        deniz = input('again?')
+        if deniz == "yes":
+            return dungeon(a)
+        return a
+    elif i > 6000 and i <= 9000:
+        print("WOW, a vault of gold? you gain 800 Gold.")
+        a += 800
+        print(f"You have {a} gold coins.")
+        deniz = input('again?')
+        if deniz == "yes":
+            return dungeon(a)
+        return a
+    else:
+        print("Ms.Zerega's Homework pass????, You gain 2000 Gold.")
+        a += 2000
+        print(f"You have {a} gold coins.")
+        deniz = input('again?')
+        if deniz == "yes":
+            return dungeon(a)
+        return a
+        
+        
 #"Guard, 20% Rarity, You Die",
 # "Spike, 20% arity, You Die.",
 #"Fake Stash of Diamonds(It was bombs), 10% Rarity, You Die.",
@@ -208,7 +243,7 @@ if question == "forest":
         x = forest(x)
 if question == "cave":
      x = cave(x)
-if question == "jarvisdungeon":
+if question == "dungeon":
     x = dungeon(x)
 
 print(f"You have {x} gold coins.")
