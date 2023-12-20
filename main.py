@@ -4,8 +4,12 @@ import time, os, json
 
 x = 0
 
+from datetime import datetime
+
+now = datetime.now()
+
 t = time.time()/86400
-print(t)
+print(now)
 
 with open("coins.json", "r") as f:
     # Serialize the updated Python list to a JSON string
