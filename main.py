@@ -1,8 +1,11 @@
 from location import Location
-from random import randint
+import random
 import time, os, json
 
 x = 0
+
+t = time.time()/86400
+print(t)
 
 with open("coins.json", "r") as f:
     # Serialize the updated Python list to a JSON string
@@ -74,7 +77,7 @@ dungeon = Location("Dungeon", ["Guard, 20% Rarity, You Die",
         #time.sleep(speedo)
 
 def forest(y):
-    i = randint(1, 10000)
+    i = random.randint(1, 10000)
 
     if i <= 5000:
 
@@ -120,11 +123,11 @@ def forest(y):
 
 def cave(z):
 
-    i = randint(1, 10000)
+    i = random.randint(1, 10000)
     if metaldetector:
-        i = randint (1, 20000)
+        i = random.randint (1, 20000)
     if shovel:
-        i = randint (1, 10000)
+        i = random.randint (1, 10000)
     if ((not shovel) and i < 2000) or (shovel and i < 1000):
         print("wow, you found dog feces. you gained 0 coins")
         z += 0
@@ -194,7 +197,9 @@ def cave(z):
 
 
 def dungeon(a):
-    i = randint(1, 10000)
+    i = random.randint(1, 10000)
+    if axe:
+        i = random.randint(2001, 10000)
     if i <= 2000:
         print("You got caught by a guard and got shot, You Die.")
         return 0
