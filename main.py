@@ -4,15 +4,13 @@ import json
 x = open("data.json", encoding="utf8")
 data = json.load(x)
 
-player_gold_coins = 0
-
 def display():
     for i in range(6):
         print(f"{i}. {data[i]['item']}")
         i += 1
 
 def Jarvis_the_merchant():
-    player_gold_coins = 0
+    player_gold_coins = 312439041283044123940821348812038412
     merchant_Jarvis = Trader("Jarvis", [data[0]["item"], data[1]["item"], data[2]["item"], data[3]["item"], data[4]["item"], data[5]["item"]])
     
     question_display_Jarvis = input("Do you want to see Jarvis the merchant's items?").lower()
@@ -20,9 +18,12 @@ def Jarvis_the_merchant():
         display()
 
     question_buy_Jarvis = int(input("What item number would you like to buy from Jarvis the merchant?"))
-    merchant_Jarvis.buy_trader(data[question_buy_Jarvis]["item"])
-    player_gold_coins -= data[question_buy_Jarvis]["price"]
-    print(player_gold_coins)
+    if data[question_buy_Jarvis]["price"] <= player_gold_coins:
+        merchant_Jarvis.buy_trader(data[question_buy_Jarvis]["item"])
+        player_gold_coins -= data[question_buy_Jarvis]["price"]
+        print(f"You have {player_gold_coins} left.")
+    else:
+        print(f"You do not have enough gold coins to buy {data[question_buy_Jarvis]['item']}.")
 
 question_interact_Jarvis = input("Would you like to interact with Jarvis the merchant?").lower()
 if question_interact_Jarvis == "yes":
