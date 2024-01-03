@@ -1,7 +1,7 @@
 from location import Location
-import random
+from random import randint 
 import time, os, json
-from coins import *
+from coins import forest, cave, dungeon
 
 x = 0
 
@@ -17,37 +17,10 @@ with open("coins.json", "r") as f:
     x = json.load(f)[0]
 
 
-axe = False
-flashlight = False
-metaldetector = False
-shovel = False
-pickaxe = False
-
-Equip = input("What item do you want to use?(the ones you have dont lie):")
-
-if Equip == "axe":
-    axe = True
-elif Equip == "flashlight":
-    flashlight = True
-elif Equip == "metaldetector":
-    metaldetector = True
-    if metaldetector == True:
-        print("Metaldetector:True")
-elif Equip == "shovel":
-    shovel = True
-elif Equip == "pickaxe":
-    pickaxe = True
-elif Equip == "None":
-    axe = False
-    flashlight = False
-    metaldetector = False
-    shovel = False
-    pickaxe = False
 
 
 
-
-forest = Location("Forest", [
+Forest = Location("Forest", [
     "Wood, 80% Rarity", 
     "Worth 1 Gold Coin", 
     "Pre-Historic Human 20% Chance", 
@@ -58,14 +31,14 @@ forest = Location("Forest", [
 
 # forest.information()
 
-cave = Location("Cave", ["Dog Feces, 20% Rarity, Worth 0 Coins",
+Cave = Location("Cave", ["Dog Feces, 20% Rarity, Worth 0 Coins",
                          "Vbucks, 30% Rarity, Worth 5 Coins"
                          "Special Miner's hat, 30% Rarity, 15 Coins",
                          "Even more Special Miner's hat, 20% Rarity, 30 Coins",
                          "Iron, 6% Rarity, Worth 50 Gold","Diamonds, 4% Rarity, Worth 150 Gold", 
                          "Mr. Whalen, 0.02% Rarity, 0.01% Chance of 1000 Coin gain"])
 
-dungeon = Location("Dungeon", ["Guard, 20% Rarity, You Die",
+Dungeon = Location("Dungeon", ["Guard, 20% Rarity, You Die",
                                "Spike, 20% Rarity, You Die.",
                                "Fake Stash of Diamonds(It was bombs), 10% Rarity, You Die.",
                                "Real Stash of Diamonds, 10% Rarity, Worth 1000 Gold",
@@ -115,3 +88,4 @@ with open(new_file, "w") as f:
 # Overwrite the old JSON file with the new one
 os.remove("coins.json")
 os.rename(new_file, "coins.json")
+

@@ -1,5 +1,32 @@
 import random
-from main import *
+
+axe = False
+flashlight = False
+metaldetector = False
+shovel = False
+pickaxe = False
+
+Equip = input("What item do you want to use?(the ones you have dont lie):")
+
+if Equip == "axe":
+    axe = True
+elif Equip == "flashlight":
+    flashlight = True
+elif Equip == "metaldetector":
+    metaldetector = True
+    if metaldetector == True:
+        print("Metaldetector:True")
+elif Equip == "shovel":
+    shovel = True
+elif Equip == "pickaxe":
+    pickaxe = True
+elif Equip == "None":
+    axe = False
+    flashlight = False
+    metaldetector = False
+    shovel = False
+    pickaxe = False
+
 def forest(y):
     i = random.randint(1, 10000)
 
