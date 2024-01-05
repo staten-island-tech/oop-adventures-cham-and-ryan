@@ -1,73 +1,73 @@
 [
     {
         "from": "Jarvis",
-        "item": "Axe",
+        "item": "axe",
         "price": 1000,
         "type": "tool"
     },
     {
         "from": "Jarvis' brother",
-        "item": "Diamond",
+        "item": "diamond",
         "price": 25000,
         "type": "ore"
     },
     {
         "from": "Jarvis' brother",
-        "item": "Emerald",
+        "item": "emerald",
         "price": 50000,
         "type": "ore"
     },
     {
         "from": "Jarvis",
-        "item": "Flashlight",
+        "item": "flashlight",
         "price": 750,
         "type": "tool"
     },
     {
         "from": "Jarvis' brother",
-        "item": "Gold",
+        "item": "gold",
         "price": 7500,
         "type": "ore"
     },
     {
         "from": "Jarvis' brother",
-        "item": "Iron",
+        "item": "iron",
         "price": 4000,
         "type": "ore"
     },
     {
         "from": "Jarvis",
-        "item": "Map",
+        "item": "map",
         "price": 7500,
         "type": "tool"
     },
     {
         "from": "Jarvis",
-        "item": "Metal Detector",
+        "item": "metal Detector",
         "price": 10000,
         "type": "tool"
     },
     {
         "from": "Jarvis",
-        "item": "Pickaxe",
+        "item": "pickaxe",
         "price": 2500,
         "type": "tool"
     },
     {
         "from": "Jarvis' brother",
-        "item": "Platinum",
+        "item": "platinum",
         "price": 12500,
         "type": "ore"
     },
     {
         "from": "Jarvis",
-        "item": "Shovel",
+        "item": "shovel",
         "price": 1500,
         "type": "tool"
     },
     {
         "from": "Jarvis' brother",
-        "item": "Silver",
+        "item": "silver",
         "price": 5000,
         "type": "ore"
     }
