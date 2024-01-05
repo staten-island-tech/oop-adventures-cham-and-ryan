@@ -2,9 +2,10 @@ from location import Location
 from random import randint 
 import time, os, json
 from coins import forest, cave, dungeon
+from villain import Villain
 
 x = 0
-
+e = 30000
 from datetime import datetime
 
 now = datetime.now()
@@ -46,24 +47,17 @@ Dungeon = Location("Dungeon", ["Guard, 20% Rarity, You Die",
                                "Vault of Gold, 30% Rarity, Worth 800 Gold",
                                "Ms. Zerega's Homework pass, 5% Rarity, Worth 2000 Gold"])
 
-# << Function With Butter >> #
+Eyad = Villain("Eyad(Final Boss)", "30,000 Gold")
 
-# cave.information()
-#def print(text, speedo):
-    #for char in text:
-        #print(char, end="")
-        #time.sleep(speedo)
-
-
+def final(i):
+    randint(1, 10000)
+    if i < 5000:
+        x - 20
+        return x
+    elif i >= 5000:
+         e - 20
         
-        
-#"Guard, 20% Rarity, You Die",
-# "Spike, 20% arity, You Die.",
-#"Fake Stash of Diamonds(It was bombs), 10% Rarity, You Die.",
-#"Real Stash of Diamonds, 10% Rarity, Worth 1000 Gold",
-#"Mr. Whalen's password (You can give yourself HOS Points),5% Rarity, Worth 1200 Gold",
-#"Vault of Gold, 30% Rarity, Worth 800 Gold",
-#"Ms. Zerega's Homework pass, 5% Rarity, Worth 2000 Gold"
+    
 
 question = input("Choose Forest, Cave, Or Dungeon: ").lower()
 if question == "forest":
@@ -74,6 +68,10 @@ if question == "dungeon":
     x = dungeon(x)
 
 print(f"You have {x} gold coins.")
+
+finalboss=input("do you want to fight the final boss?")
+if finalboss == ("yes"):
+     final()
 
 new_file = "updated.json"
 with open(new_file, "w") as f:
