@@ -1,14 +1,11 @@
-class Player():
-    def __init__(self, name, item):
+class NPC():
+    def __init__(self, name, occupation, item):
         self.name = name
+        self.occupation = occupation
         self.item = item
-    def add(self, add_item):
+    def add_inventory(self, add_item):
         self.item.append(add_item)
-
-class Trader():
-    def __init__(self, name, item):
-        self.name = name
-        self.item = item
-    def buy_trader(self, buy_item):
-        self.item.remove(buy_item)
-        print(f"You have bought a {buy_item} from {self.name}.")
+        print(f"A {add_item} has been added into your inventory.")
+    def sell_item(self, sell_item):
+        self.item.remove(sell_item)
+        print(f"{self.name} has sold a {sell_item} to you.")
