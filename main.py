@@ -5,7 +5,7 @@ from coins import forest, cave, dungeon
 from villain import Villain
 
 x = 0
-e = 30000
+e = 5000
 from datetime import datetime
 
 now = datetime.now()
@@ -49,14 +49,22 @@ Dungeon = Location("Dungeon", ["Guard, 20% Rarity, You Die",
 
 Eyad = Villain("Eyad(Final Boss)", "30,000 Gold")
 
-def final(i):
-    randint(1, 10000)
-    if i < 5000:
-        x - 20
-        return x
-    elif i >= 5000:
-         e - 20
-        
+def final():
+    global x
+    global e
+    while x > 0 and e > 0:
+        i = randint(1, 10000)
+        if  i < 5000:
+            x -= 20
+            return x
+        elif i >= 5000:
+            e -= 20
+    if x <= 0:
+         print ("you suck and lost restart loser")
+    else:
+         print ("wow you beat eyad yay you win")
+
+
     
 
 question = input("Choose Forest, Cave, Or Dungeon: ").lower()
