@@ -55,10 +55,13 @@ def final():
     while x > 0 and e > 0:
         i = randint(1, 10000)
         if  i < 5000:
-            x -= 20
-            return x
+            x -= 2
+            print (f"you have {x} gold coins")
+            print (f"eyad has {e} gold coins")
         elif i >= 5000:
-            e -= 20
+            e -= 2
+            print (f"you have {x} gold coins")
+            print (f"eyad has {e} gold coins")
     if x <= 0:
          print ("you suck and lost restart loser")
     else:
