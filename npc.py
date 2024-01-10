@@ -9,3 +9,5 @@ class NPC():
     def sell_item(self, sell_item):
         self.item.remove(sell_item)
         print(f"{self.name} has sold a {sell_item} to you.")
+    def display(self):
+        print(self.item)
