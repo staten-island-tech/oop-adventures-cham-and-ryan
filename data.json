@@ -3,16 +3,20 @@
         "from": "Jarvis",
         "item": "axe",
         "price": 1000,
-        "type": "tool"
+        "type": "tool",
+        "variant_silver": "silver axe",
+        "variant_gold": "gold axe",
+        "variant_diamond": "diamond axe",
+        "variant_emerald": "emerald axe"
     },
     {
-        "from": "Jarvis' brother",
+        "from": "Brian",
         "item": "diamond",
         "price": 25000,
         "type": "ore"
     },
     {
-        "from": "Jarvis' brother",
+        "from": "Brian",
         "item": "emerald",
         "price": 50000,
         "type": "ore"
@@ -24,15 +28,9 @@
         "type": "tool"
     },
     {
-        "from": "Jarvis' brother",
+        "from": "Brian",
         "item": "gold",
         "price": 7500,
-        "type": "ore"
-    },
-    {
-        "from": "Jarvis' brother",
-        "item": "iron",
-        "price": 4000,
         "type": "ore"
     },
     {
@@ -54,19 +52,13 @@
         "type": "tool"
     },
     {
-        "from": "Jarvis' brother",
-        "item": "platinum",
-        "price": 12500,
-        "type": "ore"
-    },
-    {
         "from": "Jarvis",
         "item": "shovel",
         "price": 1500,
         "type": "tool"
     },
     {
-        "from": "Jarvis' brother",
+        "from": "Brian",
         "item": "silver",
         "price": 5000,
         "type": "ore"
