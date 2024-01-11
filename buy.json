@@ -1,0 +1,44 @@
+[
+    {
+        "from": "Jarvis",
+        "item": "axe",
+        "price": 1000,
+        "type": "tool"
+    },
+    {
+        "from": "Brian",
+        "item": "diamond",
+        "price": 25000,
+        "type": "ore"
+    },
+    {
+        "from": "Brian",
+        "item": "emerald",
+        "price": 50000,
+        "type": "ore"
+    },
+    {
+        "from": "Brian",
+        "item": "gold",
+        "price": 7500,
+        "type": "ore"
+    },
+    {
+        "from": "Jarvis",
+        "item": "pickaxe",
+        "price": 2500,
+        "type": "tool"
+    },
+    {
+        "from": "Jarvis",
+        "item": "shovel",
+        "price": 1500,
+        "type": "tool"
+    },
+    {
+        "from": "Brian",
+        "item": "silver",
+        "price": 5000,
+        "type": "ore"
+    }
+]
