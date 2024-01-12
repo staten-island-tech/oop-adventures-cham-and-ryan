@@ -5,7 +5,7 @@ from coins import forest, cave, dungeon
 from villain import Villain
 
 x = 0
-e = 5
+e = 5000
 from datetime import datetime
 
 now = datetime.now()
